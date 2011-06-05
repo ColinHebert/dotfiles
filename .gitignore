@@ -1,0 +1,6 @@
+# Ignoring hidden files, these should be accessible directly
+# and renamed when hardlinked to their place
+.*
+
+# Except for this file of course
+!.gitignore

@@ -2,5 +2,6 @@
 # and renamed when hardlinked to their place
 .*
 
-# Except for this file of course
+# Except for those files of course
 !.gitignore
+!.gitmodules

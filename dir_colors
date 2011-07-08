@@ -1,0 +1,20 @@
+NORMAL                 0
+FILE                   0
+DIR                    36
+LINK                   01;31
+#ORPHAN                 
+#MISSING
+FIFO                   01;33
+SOCKET                 37
+BLOCK                  37
+CHAR                   37
+#DOOR                   
+EXEC                   35
+#LEFTCODE               
+#RIGHTCODE              
+#ENDCODE                
+SETUID                 37
+SETGID                 37
+STICKY                 0
+OTHER_WRITABLE         32
+STICKY_OTHER_WRITABLE  32

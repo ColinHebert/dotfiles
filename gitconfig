@@ -22,6 +22,7 @@
 [alias]
     stat = status
     st = status
+    remove = rm
     ci = commit
     cia = commit --amend
     ciaa = commit -a --amend
@@ -30,7 +31,9 @@
     df = diff
     lg = log -p
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    loll = !git lol | less
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lolal = !git lola | less
     ls = ls-files
     unstash = stash pop
     log-merge = !git log $(git merge-base --octopus $(git log -1 --merges --pretty=format:%P $1))..$1 --graph --pretty=oneline --abbrev-commit --boundary

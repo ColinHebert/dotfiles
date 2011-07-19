@@ -1,8 +1,11 @@
 #GNU-utils (port)
 PATH=/opt/local/libexec/gnubin:$PATH
-#Git exec
+#Git exec (port)
 PATH=/opt/local/libexec/git-core:$PATH
 #Port bins
-PATH=$PATH:/opt/local/bin:/opt/local/sbin
+PATH=/opt/local/bin:/opt/local/sbin:$PATH
 #Usr bins
-PATH=$PATH:/usr/local/bin:/usr/local/sbin
+PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+export EDITOR='emacsclient'
+export LESS=-R

@@ -1,3 +1,9 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = https://github.com/ColinHebert/oh-my-zsh.git
+[submodule "emacs.d/vendor/color-theme"]
+	path = emacs.d/vendor/color-theme
+	url = https://github.com/emacsmirror/color-theme.git
+[submodule "emacs.d/vendor/color-theme-ir-black"]
+	path = emacs.d/vendor/color-theme-ir-black
+	url = https://github.com/burke/color-theme-ir-black.git

@@ -7,3 +7,6 @@
 [submodule "emacs.d/vendor/color-theme-ir-black"]
 	path = emacs.d/vendor/color-theme-ir-black
 	url = https://github.com/burke/color-theme-ir-black.git
+[submodule "emacs.d/vendor/magit"]
+	path = emacs.d/vendor/magit
+	url = https://github.com/magit/magit.git

@@ -18,7 +18,6 @@
 (global-unset-key (kbd "C-x 0")) ; was delete-window
 (global-unset-key (kbd "C-x o")) ; was other-window
 
-
 ;; Window navigation
 (windmove-default-keybindings 'meta)
 
@@ -28,3 +27,13 @@
 ;; Easier buffer killing
 (global-unset-key (kbd "M-k"))
 (global-set-key (kbd "M-K") 'kill-this-buffer)
+
+;; Modern Page-up and Page-down
+(global-set-key (kbd "C-v")
+  (lambda () (interactive)
+    (condition-case nil (scroll-up)
+      (end-of-buffer (goto-char (point-max))))))
+(global-set-key (kbd "M-v")
+  (lambda () (interactive)
+    (condition-case nil (scroll-down)
+      (beginning-of-buffer (goto-char (point-min))))))

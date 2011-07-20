@@ -6,3 +6,4 @@
 
 (vendor 'color-theme)
 (vendor 'magit 'magit-status)
+(vendor 'git-commit)

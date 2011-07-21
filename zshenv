@@ -7,5 +7,5 @@ PATH=/opt/local/bin:/opt/local/sbin:$PATH
 #Usr bins
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-export EDITOR='emacsclient'
+export EDITOR="emacsclient -nw -a ''"
 export LESS=-R

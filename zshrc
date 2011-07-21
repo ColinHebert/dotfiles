@@ -23,3 +23,6 @@ plugins=(git zsh-syntax-highlighting history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+alias ec="emacsclient -n -c -a ''"
+alias em="emacsclient -nw -a ''"
+alias ea="emacsclient -n -a ''"

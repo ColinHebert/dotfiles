@@ -5,6 +5,7 @@
 (personal 'ido)
 (personal 'mac)
 (personal 'recentf)
+(personal 'server-mode)
 (personal 'utf-8)
 
 (vendor 'color-theme)

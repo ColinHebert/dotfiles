@@ -9,5 +9,5 @@
 (personal 'utf-8)
 
 (vendor 'color-theme)
-(vendor 'magit 'magit-status)
+(vendor 'magit 'magit-status 'rebase-mode)
 (vendor 'git-commit)

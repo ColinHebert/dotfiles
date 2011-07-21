@@ -4,6 +4,7 @@
 (personal 'hl-line)
 (personal 'ido)
 (personal 'mac)
+(personal 'recentf)
 (personal 'utf-8)
 
 (vendor 'color-theme)

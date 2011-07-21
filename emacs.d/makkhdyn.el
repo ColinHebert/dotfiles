@@ -3,6 +3,7 @@
 (personal 'bindings)
 (personal 'hl-line)
 (personal 'ido)
+(personal 'utf-8)
 
 (vendor 'color-theme)
 (vendor 'magit 'magit-status)

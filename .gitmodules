@@ -13,3 +13,6 @@
 [submodule "emacs.d/vendor/git-commit"]
 	path = emacs.d/vendor/git-commit
 	url = https://github.com/rafl/git-commit-mode.git
+[submodule "nano.d/syntax-highlighting"]
+	path = nano.d/syntax-highlighting
+	url = https://github.com/scopatz/nanorc.git

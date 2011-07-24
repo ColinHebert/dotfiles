@@ -21,7 +21,7 @@
     untracked = cyan
 [alias]
     stat = status
-    st = status
+    st = status --short
     remove = rm
     ci = commit
     cia = commit --amend

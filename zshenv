@@ -10,7 +10,7 @@ for f in /etc/manpaths.d/*; do manpath+=($(<$f)); done
 # ------------------------------------------------------------------------------
 # Editors
 # ------------------------------------------------------------------------------
-export EDITOR="emacsclient -nw -a ''"
+export EDITOR="emacsclient -t -a ''"
 export VISUAL=$EDITOR
 export PAGER="less"
 

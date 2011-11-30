@@ -1,4 +1,5 @@
 [core]
+    attributesfile = ~/.gitattributes
     excludesfile = ~/.gitignore
     pager = cat
 [user]
@@ -19,6 +20,8 @@
     added = yellow
     changed = green
     untracked = cyan
+[diff "plist"]
+    textconv = catplist
 [alias]
     stat = status
     st = status --short

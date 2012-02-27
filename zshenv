@@ -2,7 +2,8 @@
 # PATH
 # ------------------------------------------------------------------------------
 typeset -U PATH MANPATH # Do not allow duplicate entries.
-export PATH=$HOME/.local/bin:$HOME/.local/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=$HOME/.local/bin:$HOME/.local/sbin:/usr/local/bin:/usr/local/sbin
+export PATH=$PATH:$(brew --prefix coreutils)/libexec/gnubin:/usr/bin:/bin:/usr/sbin:/sbin
 for f in /etc/paths.d/*; do path+=($(<$f)); done
 export MANPATH=$HOME/.local/share/man:/usr/local/share/man:/usr/share/man
 for f in /etc/manpaths.d/*; do manpath+=($(<$f)); done
@@ -21,8 +22,7 @@ export LESSCHARSET="UTF-8"
 export LESSHISTFILE='-'
 export LESSEDIT='%E ?lm+%lm. %f'
 export LESS='-c -F -i -M -R -S -w -X -z-4'
-[[ -x "${commands[lesspipe.sh]}" ]] && \
-    export LESSOPEN='|/usr/local/bin/lesspipe.sh %s'
+[[ -x "${commands[lesspipe.sh]}" ]] && export LESSOPEN='|/usr/local/bin/lesspipe.sh %s'
 
 # ------------------------------------------------------------------------------
 # Termcap Colours

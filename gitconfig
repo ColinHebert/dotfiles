@@ -1,12 +1,11 @@
 [core]
     attributesfile = ~/.gitattributes
     excludesfile = ~/.gitignore
-    pager = cat
 [user]
     name = Colin Hebert
     email = hebert.colin@gmail.com
 [color]
-    ui = always
+    ui = true
 [color "branch"]
     current = yellow reverse
     local = yellow
@@ -33,10 +32,10 @@
     co = checkout
     df = diff
     lg = log -p
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    loll = !git lol | less
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    lolal = !git lola | less
+    loll = log --graph --decorate --pretty=oneline --abbrev-commit
+    lol = !git --no-pager loll
+    lolal = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lola = !git --no-pager lolal
     ls = ls-files
     unstash = stash pop
     log-merge = !git log $(git merge-base --octopus $(git log -1 --merges --pretty=format:%P $1))..$1 --graph --pretty=oneline --abbrev-commit --boundary

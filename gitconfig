@@ -3,7 +3,7 @@
     excludesfile = ~/.gitignore
 [user]
     name = Colin Hebert
-    email = hebert.colin@gmail.com
+    email = colin.hebert@oucs.ox.ac.uk
 [color]
     ui = true
 [color "branch"]

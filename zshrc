@@ -1,28 +1,42 @@
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+#
+# Sets Oh My Zsh options.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#   Colin Hebert <hebert.colin@gmail.com>
+#
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-export ZSH_THEME="makkhdyn"
+# Presets
+[[ -f "${0:h}/.pre.zshrc" ]] && source "${0:h}/.pre.zshrc"
 
-# Set to this to use case-sensitive completion
-# export CASE_SENSITIVE="true"
+# Set the key mapping style to 'emacs' or 'vi'.
+zstyle ':omz:editor' keymap 'emacs'
 
-# Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
+# Auto convert .... to ../..
+zstyle ':omz:editor' dot-expansion 'yes'
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# export DISABLE_AUTO_TITLE="true"
+# Set case-sensitivity for completion, history lookup, etc.
+zstyle ':omz:*:*' case-sensitive 'no'
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git zsh-syntax-highlighting history-substring-search brew)
+# Color output (auto set to 'no' on dumb terminals).
+zstyle ':omz:*:*' color 'yes'
 
-source $ZSH/oh-my-zsh.sh
+# Auto set the tab and window titles.
+zstyle ':omz:terminal' auto-title 'yes'
 
-# Customize to your needs...
-alias ec="emacsclient -n -c -a ''"
-alias em="emacsclient -nw -a ''"
-alias ea="emacsclient -n -a ''"
+# Set the plugins to load (see $OMZ/plugins/).
+zstyle ':omz:load' plugin 'tmux' 'archive' 'git' 'history-substring-search'
+
+# Auto launch GNU Screen at start-up.
+zstyle ':omz:plugin:tmux:auto' start 'yes'
+
+# Set the prompt theme to load.
+# Setting it to 'random' loads a random theme.
+# Auto set to 'off' on dumb terminals.
+zstyle ':omz:prompt' theme 'makkhdyn'
+
+# This will make you shout: OH MY ZSHELL!
+source "$HOME/.oh-my-zsh/init.zsh"
+
+# Prost-sets
+[[ -f "${0:h}/.post.zshrc" ]] && source "${0:h}/.post.zshrc"

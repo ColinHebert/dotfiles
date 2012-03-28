@@ -9,6 +9,18 @@ path=(
   $path
 )
 
+infopath=(
+  $HOME/.local/share/info
+  $HOME/.local/opt/share/info
+  $infopath
+)
+
+manpath=(
+  $HOME/.local/share/man
+  $HOME/.local/opt/share/man
+  $manpath
+)
+
 # ------------------------------------------------------------------------------
 # Editors
 # ------------------------------------------------------------------------------

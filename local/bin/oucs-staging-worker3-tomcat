@@ -1,0 +1,3 @@
+#!/bin/sh
+
+curl --negotiate -u: https://webadmin.oucs.ox.ac.uk/worker-3.staging.sakai.app-0.man.sysdev.tld/logs/tomcat.log?lines=all

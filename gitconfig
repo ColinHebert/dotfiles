@@ -43,3 +43,7 @@
     git = !git
 [rerere]
 	enabled = true
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE

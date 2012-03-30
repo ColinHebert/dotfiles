@@ -28,7 +28,7 @@ zstyle ':omz:terminal' auto-title 'yes'
 zstyle ':omz:load' plugin 'tmux' 'archive' 'git' 'history-substring-search' 'syntax-highlighting'
 
 # Auto launch GNU Screen at start-up.
-zstyle ':omz:plugin:tmux:auto' start 'yes'
+zstyle ':omz:plugin:tmux' auto-start 'yes'
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.

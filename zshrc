@@ -7,7 +7,7 @@
 #
 
 # Presets
-[[ -f "${0:h}/.pre.zshrc" ]] && source "${0:h}/.pre.zshrc"
+[[ -f "$HOME/.pre.zshrc" ]] && source "$HOME/.pre.zshrc"
 
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':omz:editor' keymap 'emacs'
@@ -38,5 +38,5 @@ zstyle ':omz:prompt' theme 'makkhdyn'
 # This will make you shout: OH MY ZSHELL!
 source "$HOME/.oh-my-zsh/init.zsh"
 
-# Prost-sets
-[[ -f "${0:h}/.post.zshrc" ]] && source "${0:h}/.post.zshrc"
+# Post-sets
+[[ -f "$HOME/.post.zshrc" ]] && source "$HOME/.post.zshrc"

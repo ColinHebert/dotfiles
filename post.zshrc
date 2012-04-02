@@ -4,10 +4,9 @@
 path=(
   $HOME/.local/{bin,sbin}
   $HOME/.local/opt/{bin,sbin}
-  $(brew --prefix coreutils)/libexec/gnubin
-  /usr/local/{bin,sbin}
   $path
 )
+rehash
 
 infopath=(
   $HOME/.local/share/info

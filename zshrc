@@ -25,7 +25,7 @@ zstyle ':omz:*:*' color 'yes'
 zstyle ':omz:terminal' auto-title 'yes'
 
 # Set the plugins to load (see $OMZ/plugins/).
-zstyle ':omz:load' plugin 'tmux' 'archive' 'git' 'history-substring-search' 'syntax-highlighting'
+zstyle ':omz:load' plugin 'tmux' 'gnu-utils' 'archive' 'git' 'history-substring-search' 'syntax-highlighting'
 
 # Auto launch GNU Screen at start-up.
 zstyle ':omz:plugin:tmux' auto-start 'yes'

@@ -1,0 +1,10 @@
+# ------------------------------------------------------------------------------
+# Per-host settings
+# ------------------------------------------------------------------------------
+
+# Oxford settings
+Host *.ox.ac.uk
+    GSSAPIAuthentication yes
+    # This is needed with Lion to stop it getting the incorrect ticket.
+    GSSAPITrustDNS yes
+    PreferredAuthentications gssapi-keyex,gssapi-with-mic,publickey

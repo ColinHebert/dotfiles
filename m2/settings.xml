@@ -1,0 +1,20 @@
+<settings xmlns="http://maven.apache.org/POM/4.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>maven-repo.oucs</id>
+            <username>oucs0164</username>
+            <password>c8g1a0t4n6</password>
+        </server>
+    </servers>
+    <mirrors>
+        <mirror>
+            <id>maven-repo.oucs</id>
+            <url>http://maven-repo.oucs.ox.ac.uk/content/groups/public</url>
+            <mirrorOf>apache-repo,central,maven2-repository.dev.java.net,sakai-maven,default,Sakai Plugin Repo
+            </mirrorOf>
+        </mirror>
+    </mirrors>
+</settings>

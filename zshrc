@@ -9,11 +9,14 @@
 # Presets
 [[ -f "$HOME/.pre.zshrc" ]] && source "$HOME/.pre.zshrc"
 
+# Set the path to Oh My Zsh.
+export OMZ="$HOME/.oh-my-zsh"
+
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':omz:editor' keymap 'emacs'
+zstyle ':omz:module:editor' keymap 'emacs'
 
 # Auto convert .... to ../..
-zstyle ':omz:editor' dot-expansion 'yes'
+zstyle ':omz:module:editor' dot-expansion 'no'
 
 # Set case-sensitivity for completion, history lookup, etc.
 zstyle ':omz:*:*' case-sensitive 'no'
@@ -22,21 +25,23 @@ zstyle ':omz:*:*' case-sensitive 'no'
 zstyle ':omz:*:*' color 'yes'
 
 # Auto set the tab and window titles.
-zstyle ':omz:terminal' auto-title 'yes'
+zstyle ':omz:module:terminal' auto-title 'yes'
 
-# Set the plugins to load (see $OMZ/plugins/).
-zstyle ':omz:load' plugin 'tmux' 'gnu-utils' 'archive' 'git' 'history-substring-search' 'syntax-highlighting'
+# Set the Oh My Zsh modules to load (browse modules).
+zstyle ':omz:load' omodule 'tmux' 'gnu-utils' 'environment' 'terminal' \
+  'editor' 'completion' 'history' 'directory' 'spectrum' 'alias' 'prompt' \
+  'archive' 'git' 'history-substring-search' 'syntax-highlighting'
 
 # Auto launch GNU Screen at start-up.
-zstyle ':omz:plugin:tmux' auto-start 'yes'
+zstyle ':omz:module:tmux' auto-start 'yes'
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':omz:prompt' theme 'makkhdyn'
+zstyle ':omz:module:prompt' theme 'makkhdyn'
 
 # This will make you shout: OH MY ZSHELL!
-source "$HOME/.oh-my-zsh/init.zsh"
+source "$OMZ/init.zsh"
 
 # Post-sets
 [[ -f "$HOME/.post.zshrc" ]] && source "$HOME/.post.zshrc"

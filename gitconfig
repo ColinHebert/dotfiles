@@ -42,9 +42,10 @@
     log-all = !git log --graph --decorate --pretty=oneline --abbrev-commit --all $(git fsck --no-reflogs | grep commit | cut -d\\  -f3)
     git = !git
     x = !gitx
+    man = help
 [rerere]
-	enabled = true
+    enabled = true
 [merge]
-	tool = diffmerge
+    tool = diffmerge
 [mergetool "diffmerge"]
-	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+    cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE

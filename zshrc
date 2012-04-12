@@ -28,8 +28,10 @@ zstyle ':omz:*:*' color 'yes'
 zstyle ':omz:module:terminal' auto-title 'yes'
 
 # Set the Oh My Zsh modules to load (browse modules).
-zstyle ':omz:load' omodule 'tmux' 'gnu-utils' 'environment' 'terminal' \
-  'editor' 'completion' 'history' 'directory' 'spectrum' 'alias' 'prompt' \
+zstyle ':omz:load' omodule \
+  'tmux' 'gnu-utility' \
+  'environment' 'terminal' 'editor' 'completion' 'history' 'directory' \
+  'alias' 'prompt' \
   'archive' 'git' 'history-substring-search' 'syntax-highlighting'
 
 # Auto launch GNU Screen at start-up.

@@ -6,12 +6,6 @@
 #   Colin Hebert <hebert.colin@gmail.com>
 #
 
-# Presets
-[[ -f "$HOME/.pre.zshrc" ]] && source "$HOME/.pre.zshrc"
-
-# Set the path to Oh My Zsh.
-export OMZ="$HOME/.oh-my-zsh"
-
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':omz:module:editor' keymap 'emacs'
 
@@ -44,6 +38,3 @@ zstyle ':omz:module:prompt' theme 'makkhdyn'
 
 # This will make you shout: OH MY ZSHELL!
 source "$OMZ/init.zsh"
-
-# Post-sets
-[[ -f "$HOME/.post.zshrc" ]] && source "$HOME/.post.zshrc"

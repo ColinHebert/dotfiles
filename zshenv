@@ -1,24 +1,60 @@
 # ------------------------------------------------------------------------------
-# Path
+# Path to Oh My Zsh
 # ------------------------------------------------------------------------------
-path=(
-  $HOME/.local/{bin,sbin}
-  $HOME/.local/opt/{bin,sbin}
-  $path
+export OMZ="$HOME/.oh-my-zsh"
+
+# ------------------------------------------------------------------------------
+# Paths
+# ------------------------------------------------------------------------------
+typeset -gU cdpath fpath mailpath manpath path
+typeset -gUT INFOPATH infopath
+
+cdpath=(
+  $HOME
+  $cdpath
 )
-rehash
 
 infopath=(
   $HOME/.local/share/info
   $HOME/.local/opt/share/info
+  /usr/local/share/info
+  /usr/share/info
   $infopath
 )
 
 manpath=(
   $HOME/.local/share/man
   $HOME/.local/opt/share/man
+  /usr/local/share/man
+  /usr/share/man
   $manpath
 )
+
+for path_file in /etc/manpaths.d/*(.N); do
+  manpath+=($(<$path_file))
+done
+unset path_file
+
+path=(
+  $HOME/.local/{bin,sbin}
+  $HOME/.local/opt/{bin,sbin}
+  /usr/local/{bin,sbin}
+  /usr/{bin,sbin}
+  /{bin,sbin}
+  $path
+)
+
+for path_file in /etc/paths.d/*(.N); do
+  path+=($(<$path_file))
+done
+unset path_file
+
+# ------------------------------------------------------------------------------
+# Locale
+# ------------------------------------------------------------------------------
+if [[ -z "$LANG" ]]; then
+  eval "$(locale)"
+fi
 
 # ------------------------------------------------------------------------------
 # Editors
@@ -26,6 +62,11 @@ manpath=(
 export EDITOR="emacsclient -t -a ''"
 export VISUAL=$EDITOR
 export PAGER="less"
+
+# Browser (Default)
+if [[ "$OSTYPE" == darwin* ]]; then
+  export BROWSER='open'
+fi
 
 # ------------------------------------------------------------------------------
 # Less
@@ -46,12 +87,7 @@ if zstyle -t ':omz:environment:termcap' color; then
   export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 fi
 
-# ------------------------------------------------------------------------------
-# Aliases
-# ------------------------------------------------------------------------------
-alias l='ls -la'
+if (( $+commands[lesspipe.sh] )); then
+  export LESSOPEN='| /usr/bin/env lesspipe.sh %s 2>&-'
+fi
 
-# ------------------------------------------------------------------------------
-# Performances tests
-# ------------------------------------------------------------------------------
-#zprof

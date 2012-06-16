@@ -25,7 +25,7 @@ zstyle ':omz:module:terminal' auto-title 'yes'
 zstyle ':omz:load' omodule \
   'tmux' 'gnu-utility' \
   'environment' 'terminal' 'editor' 'completion' 'history' 'directory' \
-  'alias' 'prompt' \
+  'prompt' \
   'archive' 'git' 'history-substring-search' 'syntax-highlighting'
 
 # Auto launch GNU Screen at start-up.

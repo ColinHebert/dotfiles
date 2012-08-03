@@ -1,6 +1,6 @@
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/ColinHebert/oh-my-zsh.git
+[submodule "prezto"]
+	path = prezto
+	url = https://github.com/ColinHebert/prezto.git
 [submodule "emacs.d/vendor/color-theme"]
 	path = emacs.d/vendor/color-theme
 	url = https://github.com/ColinHebert/color-theme.git

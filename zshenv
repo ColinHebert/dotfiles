@@ -9,10 +9,10 @@ export OMZ="$HOME/.prezto"
 typeset -gU cdpath fpath mailpath manpath path
 typeset -gUT INFOPATH infopath
 
-cdpath=(
-  $HOME
-  $cdpath
-)
+#cdpath=(
+#  $HOME
+#  $cdpath
+#)
 
 infopath=(
   $HOME/.local/share/info

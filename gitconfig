@@ -43,6 +43,7 @@
     git = !git
     x = !gitx
     man = help
+    fap = fetch --all -p
 [rerere]
     enabled = true
 [merge]

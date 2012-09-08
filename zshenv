@@ -83,6 +83,10 @@ fi
 export LESSEDIT='%E ?lm+%lm. %f'
 export LESS='-c -F -i -M -R -S -w -X -z-4'
 
+if (( $+commands[lesspipe.sh] )); then
+  export LESSOPEN='| /usr/bin/env lesspipe.sh %s 2>&-'
+fi
+
 # ------------------------------------------------------------------------------
 # Termcap Colours
 # ------------------------------------------------------------------------------
@@ -94,10 +98,6 @@ if zstyle -t ':omz:environment:termcap' color; then
   export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
   export LESS_TERMCAP_ue=$'\E[0m'           # end underline
   export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
-fi
-
-if (( $+commands[lesspipe.sh] )); then
-  export LESSOPEN='| /usr/bin/env lesspipe.sh %s 2>&-'
 fi
 
 # ------------------------------------------------------------------------------

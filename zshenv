@@ -49,6 +49,14 @@ for path_file in /etc/paths.d/*(.N); do
 done
 unset path_file
 
+# Temporary files
+if [[ -d "$TMPDIR" ]]; then
+  export TMPPREFIX="${TMPDIR%/}/zsh"
+  if [[ ! -d "$TMPPREFIX" ]]; then
+    mkdir -p "$TMPPREFIX"
+  fi
+fi
+
 # ------------------------------------------------------------------------------
 # Locale
 # ------------------------------------------------------------------------------

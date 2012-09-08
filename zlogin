@@ -2,11 +2,11 @@
 # Compile the completion dump to increase startup speed
 # ------------------------------------------------------------------------------
 {
-dump_file="$HOME/.zcompdump"
-if [[ "$dump_file" -nt "${dump_file}.zwc" || ! -s "${dump_file}.zwc" ]]; then
-  zcompile "$dump_file"
-fi
-unset dump_file
+  zcompdump="$HOME/.zcompdump"
+  if [[ "$dump_file" -nt "${zcompdump}.zwc" || ! -s "${zcompdump}.zwc" ]]; then
+    zcompile "$zcompdump"
+  fi
+  unset zcompdump
 } &!
 
 # ------------------------------------------------------------------------------

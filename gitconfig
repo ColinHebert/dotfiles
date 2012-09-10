@@ -25,9 +25,9 @@
     stat = status
     st = status --short
     remove = rm
-    ci = commit
-    cia = commit --amend
-    ciaa = commit -a --amend
+    ci = commit -v
+    cia = commit --amend -v
+    ciaa = commit -a --amend -v
     br = branch
     co = checkout
     df = diff

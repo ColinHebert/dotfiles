@@ -24,7 +24,7 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
-  'tmux' 'gnu-utility' 'utility' \
+  'tmux' 'gnu-utility' 'utility' 'ruby' \
   'environment' 'terminal' 'editor' 'completion' 'history' 'directory' \
   'prompt' \
   'archive' 'git' 'history-substring-search' 'syntax-highlighting'

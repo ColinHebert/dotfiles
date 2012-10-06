@@ -42,6 +42,7 @@
     log-all = !git log --graph --decorate --pretty=oneline --abbrev-commit --all $(git fsck --no-reflogs | grep commit | cut -d\\  -f3)
     git = !git
     x = !gitx
+    stree = !stree
     man = help
     fap = fetch --all -p
 [rerere]

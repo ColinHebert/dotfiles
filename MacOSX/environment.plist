@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>M2_HOME</key>
-	<string>/usr/share/maven</string>
+	<string>/usr/local/opt/maven/libexec</string>
 </dict>
 </plist>

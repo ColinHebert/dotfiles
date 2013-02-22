@@ -64,7 +64,7 @@ fi
 # ------------------------------------------------------------------------------
 #export EDITOR="emacsclient -t -a ''"
 export EDITOR="mate -w"
-export VISUAL=$EDITOR
+export VISUAL="$EDITOR"
 export PAGER="less"
 
 # Browser (Default)

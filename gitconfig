@@ -45,13 +45,20 @@
     fap = fetch --all -p
 [rerere]
     enabled = true
+[diff]
+    tool = Kaleidoscope
 [diff "plist"]
     textconv = catplist
 [merge]
-    tool = diffmerge
+    tool = Kaleidoscope
 [difftool]
     prompt = false
 [mergetool]
     prompt = false
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
 [mergetool "diffmerge"]
     cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE

@@ -63,7 +63,8 @@ fi
 # Editors
 # ------------------------------------------------------------------------------
 #export EDITOR="emacsclient -t -a ''"
-export EDITOR="mate -w"
+#export EDITOR="mate -w"
+export EDITOR="subl -w"
 export VISUAL="$EDITOR"
 export PAGER="less"
 

@@ -19,8 +19,6 @@
     added = yellow
     changed = green
     untracked = cyan
-[diff "plist"]
-    textconv = catplist
 [alias]
     stat = status
     st = status --short
@@ -47,7 +45,13 @@
     fap = fetch --all -p
 [rerere]
     enabled = true
+[diff "plist"]
+    textconv = catplist
 [merge]
     tool = diffmerge
+[difftool]
+    prompt = false
+[mergetool]
+    prompt = false
 [mergetool "diffmerge"]
     cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE

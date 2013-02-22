@@ -1,3 +1,10 @@
+# Checks if the first parameter passed is 'eval'.
+# If that's the case, evaluate the following command before loading anything.
+if [[ $1 == 'eval' ]]; then
+    "$@"
+    set --
+fi
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.prezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.prezto/init.zsh"

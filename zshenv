@@ -33,6 +33,7 @@ unset path_file
 path=(
   $HOME/.local/{bin,sbin}
   $HOME/.local/opt/{bin,sbin}
+  /usr/local/opt/coreutils/libexec/gnubin
   /usr/local/{bin,sbin}
   /usr/{bin,sbin}
   /{bin,sbin}

@@ -1,18 +1,6 @@
 [submodule "prezto"]
 	path = prezto
 	url = https://github.com/ColinHebert/prezto.git
-[submodule "emacs.d/vendor/color-theme"]
-	path = emacs.d/vendor/color-theme
-	url = https://github.com/ColinHebert/color-theme.git
-[submodule "emacs.d/vendor/color-theme-ir-black"]
-	path = emacs.d/vendor/color-theme-ir-black
-	url = https://github.com/burke/color-theme-ir-black.git
-[submodule "emacs.d/vendor/magit"]
-	path = emacs.d/vendor/magit
-	url = https://github.com/magit/magit.git
-[submodule "emacs.d/vendor/git-commit"]
-	path = emacs.d/vendor/git-commit
-	url = https://github.com/rafl/git-commit-mode.git
 [submodule "nano.d/syntax-highlighting"]
 	path = nano.d/syntax-highlighting
 	url = https://github.com/scopatz/nanorc.git

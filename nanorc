@@ -125,7 +125,10 @@ unset wordbounds
 #include "~/.nano.d/syntax-highlighting/asm.nanorc"
 
 #c
-#include "~/.nano.d/syntax-highlighting/c.nanorc"
+include "~/.nano.d/syntax-highlighting/c.nanorc"
+
+#cmake
+#include "~/.nano.d/syntax-highlighting/cmake.nanorc"
 
 #conf
 #include "~/.nano.d/syntax-highlighting/conf.nanorc"
@@ -142,14 +145,23 @@ include "~/.nano.d/syntax-highlighting/css.nanorc"
 #gentoo
 #include "~/.nano.d/syntax-highlighting/gentoo.nanorc"
 
+#gitcommit
+include "~/.nano.d/syntax-highlighting/gitcommit.nanorc"
+
 #groff
 #include "~/.nano.d/syntax-highlighting/groff.nanorc"
+
+#haml
+#include "~/.nano.d/syntax-highlighting/haml.nanorc"
 
 #html
 include "~/.nano.d/syntax-highlighting/html.nanorc"
 
 #java
 include "~/.nano.d/syntax-highlighting/java.nanorc"
+
+#js
+include "~/.nano.d/syntax-highlighting/js.nanorc"
 
 #lua
 #include "~/.nano.d/syntax-highlighting/lua.nanorc"
@@ -172,6 +184,9 @@ include "~/.nano.d/syntax-highlighting/perl.nanorc"
 #php
 include "~/.nano.d/syntax-highlighting/php.nanorc"
 
+#pkgbuild
+#include "~/.nano.d/syntax-highlighting/pkgbuild.nanorc"
+
 #pov
 #include "~/.nano.d/syntax-highlighting/pov.nanorc"
 
@@ -192,3 +207,7 @@ include "~/.nano.d/syntax-highlighting/tex.nanorc"
 
 #xml
 include "~/.nano.d/syntax-highlighting/xml.nanorc"
+
+#zshrc
+include "~/.nano.d/syntax-highlighting/zshrc.nanorc"
+

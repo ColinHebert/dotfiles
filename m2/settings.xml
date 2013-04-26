@@ -2,4 +2,25 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>maven-repo.oucs</id>
+            <username>oucs0164</username>
+            <password>{XAX+7P39A04HHRJ/twKwlyVaM5D/N562nmLIScmSHdA=}</password>
+        </server>
+        <server>
+            <id>github</id>
+            <password>{V/i17P5mifsHOcXqX9KLSCPxqICvx+H2H0FYyIMCIkLOIe+AA0A1RpZxUQLBIWBKdKZe6Ex6OD+ShFrY43sRTg==}</password>
+        </server>
+        <server>
+            <id>sonatype-nexus-snapshots</id>
+            <username>colinhebert</username>
+            <password>{n3GsByfQ1rIHXVtP6yq7DAbG/iCIHyGPm41/PviX8b0=}</password>
+        </server>
+        <server>
+            <id>sonatype-nexus-staging</id>
+            <username>colinhebert</username>
+            <password>{r17OittJBfMHfdxsVS5imn49ntyNVl11P2KVRMjIxlY=}</password>
+        </server>
+    </servers>
 </settings>

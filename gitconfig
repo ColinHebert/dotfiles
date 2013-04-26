@@ -4,6 +4,7 @@
 [user]
     name = Colin Hebert
     email = hebert.colin@gmail.com
+    signingkey = 5C30725AB251152A
 [color]
     ui = true
 [color "branch"]

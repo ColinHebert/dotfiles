@@ -26,11 +26,14 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 zstyle ':prezto:load' pmodule \
   'tmux' 'utility' 'ruby' \
   'environment' 'terminal' 'editor' 'completion' 'history' 'directory' \
-  'prompt' \
+  'prompt' 'gpg-agent' \
   'archive' 'git' 'history-substring-search' 'syntax-highlighting'
 
 # Auto launch GNU Screen at start-up.
 zstyle ':prezto:module:tmux' auto-start 'yes'
+
+# Use GPG agent for SSH
+zstyle ':prezto:module:gpg-agent' ssh-support 'yes'
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.

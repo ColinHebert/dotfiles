@@ -1,5 +1,6 @@
 # Checks if the first parameter passed is 'eval'.
 # If that's the case, evaluate the following command before loading anything.
+# Usage: zsh -is eval 'ls *.txt'
 if [[ $1 == 'eval' ]]; then
     "$@"
     set --

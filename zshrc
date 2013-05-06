@@ -24,5 +24,3 @@ if zstyle -t ':prezto:environment:termcap' color; then
   export LESS_TERMCAP_ue=$'\E[0m'           # end underline
   export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 fi
-
-export JAVA_HOME="$(/usr/libexec/java_home)"

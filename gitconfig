@@ -60,7 +60,5 @@
 [mergetool "Kaleidoscope"]
     cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
     trustExitCode = true
-[mergetool "diffmerge"]
-    cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
 [credential]
 	helper = osxkeychain

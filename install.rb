@@ -6,7 +6,7 @@
 # breaking anything. Use it as an installer or to upgrade after merging from an
 # upstream fork.
 
-home = File.expand_path('~')
+home = Dir.home rescue File.expand_path('~')
 
 Dir[File.dirname(__FILE__)+'/*'].each do |file|
   next if file =~ /install/ || file =~ /README/

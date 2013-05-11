@@ -8,10 +8,10 @@
 
 home = File.expand_path('~')
 
-Dir['*'].each do |file|
+Dir[File.dirname(__FILE__)+'/*'].each do |file|
   next if file =~ /install/ || file =~ /README/
-  target = File.join(home, ".#{file}")
-  `ln -ns #{File.expand_path file} #{target}`
+  target = File.join(home, "." + File.basename(file))
+  `ln -ns #{file} #{target}`
 end
 
 `git submodule sync`

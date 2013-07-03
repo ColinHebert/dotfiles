@@ -8,7 +8,7 @@
 
 home = Dir.home rescue File.expand_path('~')
 
-Dir[File.dirname(__FILE__)+'/*'].each do |file|
+Dir[File.dirname(File.expand_path(__FILE__))+'/*'].each do |file|
   next if file =~ /install/ || file =~ /README/
   target = File.join(home, "." + File.basename(file))
   `ln -ns #{file} #{target}`

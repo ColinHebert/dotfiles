@@ -30,7 +30,7 @@ zstyle ':prezto:load' pmodule \
   'archive' 'git' 'history-substring-search' 'syntax-highlighting'
 
 # Auto launch GNU Screen at start-up.
-zstyle ':prezto:module:tmux' auto-start 'yes'
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.

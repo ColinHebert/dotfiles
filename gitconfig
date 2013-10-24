@@ -47,6 +47,7 @@
     assume = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
     unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
+    restash = !git update-ref -m $(git log -1 --pretty=format:'%s' $1) refs/stash $1
 [rerere]
     enabled = true
 [diff]

@@ -121,23 +121,47 @@ unset wordbounds
 #apacheconf
 #include "~/.nano.d/syntax-highlighting/apacheconf.nanorc"
 
+#asciidoc
+#include "~/.nano.d/syntax-highlighting/asciidoc.nanorc"
+
 #asm
 #include "~/.nano.d/syntax-highlighting/asm.nanorc"
 
+#awk
+#include "~/.nano.d/syntax-highlighting/awk.nanorc"
+
 #c
-include "~/.nano.d/syntax-highlighting/c.nanorc"
+#include "~/.nano.d/syntax-highlighting/c.nanorc"
 
 #cmake
 #include "~/.nano.d/syntax-highlighting/cmake.nanorc"
 
+#coffeescript
+#include "~/.nano.d/syntax-highlighting/coffeescript.nanorc"
+
+#colortest
+#include "~/.nano.d/syntax-highlighting/colortest.nanorc"
+
 #conf
 #include "~/.nano.d/syntax-highlighting/conf.nanorc"
 
+#csharp
+#include "~/.nano.d/syntax-highlighting/csharp.nanorc"
+
 #css
-include "~/.nano.d/syntax-highlighting/css.nanorc"
+#include "~/.nano.d/syntax-highlighting/css.nanorc"
 
 #cython
 #include "~/.nano.d/syntax-highlighting/cython.nanorc"
+
+#dot
+#include "~/.nano.d/syntax-highlighting/dot.nanorc"
+
+#email
+#include "~/.nano.d/syntax-highlighting/email.nanorc"
+
+#fish
+#include "~/.nano.d/syntax-highlighting/fish.nanorc"
 
 #fortran
 #include "~/.nano.d/syntax-highlighting/fortran.nanorc"
@@ -145,8 +169,17 @@ include "~/.nano.d/syntax-highlighting/css.nanorc"
 #gentoo
 #include "~/.nano.d/syntax-highlighting/gentoo.nanorc"
 
+#git
+include "~/.nano.d/syntax-highlighting/git.nanorc"
+
 #gitcommit
 include "~/.nano.d/syntax-highlighting/gitcommit.nanorc"
+
+#glsl
+#include "~/.nano.d/syntax-highlighting/glsl.nanorc"
+
+#go
+#include "~/.nano.d/syntax-highlighting/go.nanorc"
 
 #groff
 #include "~/.nano.d/syntax-highlighting/groff.nanorc"
@@ -157,17 +190,50 @@ include "~/.nano.d/syntax-highlighting/gitcommit.nanorc"
 #html
 include "~/.nano.d/syntax-highlighting/html.nanorc"
 
+#ini
+include "~/.nano.d/syntax-highlighting/ini.nanorc"
+
+#inputrc
+#include "~/.nano.d/syntax-highlighting/inputrc.nanorc"
+
 #java
 include "~/.nano.d/syntax-highlighting/java.nanorc"
+
+#javascript
+#include "~/.nano.d/syntax-highlighting/javascript.nanorc"
 
 #js
 include "~/.nano.d/syntax-highlighting/js.nanorc"
 
+#json
+include "~/.nano.d/syntax-highlighting/json.nanorc"
+
+#keymap
+#include "~/.nano.d/syntax-highlighting/keymap.nanorc"
+
+#kickstart
+#include "~/.nano.d/syntax-highlighting/kickstart.nanorc"
+
+#ledger
+#include "~/.nano.d/syntax-highlighting/ledger.nanorc"
+
+#lisp
+#include "~/.nano.d/syntax-highlighting/lisp.nanorc"
+
 #lua
 #include "~/.nano.d/syntax-highlighting/lua.nanorc"
 
+#makefile
+#include "~/.nano.d/syntax-highlighting/makefile.nanorc"
+
 #man
-include "~/.nano.d/syntax-highlighting/man.nanorc"
+#include "~/.nano.d/syntax-highlighting/man.nanorc"
+
+#markdown
+include "~/.nano.d/syntax-highlighting/markdown.nanorc"
+
+#mpdconf
+#include "~/.nano.d/syntax-highlighting/mpdconf.nanorc"
 
 #mutt
 #include "~/.nano.d/syntax-highlighting/mutt.nanorc"
@@ -175,20 +241,35 @@ include "~/.nano.d/syntax-highlighting/man.nanorc"
 #nanorc
 include "~/.nano.d/syntax-highlighting/nanorc.nanorc"
 
+#nginx
+#include "~/.nano.d/syntax-highlighting/nginx.nanorc"
+
 #patch
 include "~/.nano.d/syntax-highlighting/patch.nanorc"
 
+#peg
+#include "~/.nano.d/syntax-highlighting/peg.nanorc"
+
 #perl
-include "~/.nano.d/syntax-highlighting/perl.nanorc"
+#include "~/.nano.d/syntax-highlighting/perl.nanorc"
 
 #php
-include "~/.nano.d/syntax-highlighting/php.nanorc"
+#include "~/.nano.d/syntax-highlighting/php.nanorc"
+
+#pkg-config
+#include "~/.nano.d/syntax-highlighting/pkg-config.nanorc"
 
 #pkgbuild
 #include "~/.nano.d/syntax-highlighting/pkgbuild.nanorc"
 
+#po
+#include "~/.nano.d/syntax-highlighting/po.nanorc"
+
 #pov
 #include "~/.nano.d/syntax-highlighting/pov.nanorc"
+
+#privoxy
+#include "~/.nano.d/syntax-highlighting/privoxy.nanorc"
 
 #python
 include "~/.nano.d/syntax-highlighting/python.nanorc"
@@ -196,18 +277,44 @@ include "~/.nano.d/syntax-highlighting/python.nanorc"
 #reST
 #include "~/.nano.d/syntax-highlighting/reST.nanorc"
 
+#rpmspec
+#include "~/.nano.d/syntax-highlighting/rpmspec.nanorc"
+
 #ruby
 include "~/.nano.d/syntax-highlighting/ruby.nanorc"
+
+#sed
+#include "~/.nano.d/syntax-highlighting/sed.nanorc"
 
 #sh
 include "~/.nano.d/syntax-highlighting/sh.nanorc"
 
+#sql
+#include "~/.nano.d/syntax-highlighting/sql.nanorc"
+
+#systemd
+#include "~/.nano.d/syntax-highlighting/systemd.nanorc"
+
 #tex
 include "~/.nano.d/syntax-highlighting/tex.nanorc"
+
+#vala
+#include "~/.nano.d/syntax-highlighting/vala.nanorc"
+
+#vi
+#include "~/.nano.d/syntax-highlighting/vi.nanorc"
 
 #xml
 include "~/.nano.d/syntax-highlighting/xml.nanorc"
 
+#xresources
+#include "~/.nano.d/syntax-highlighting/xresources.nanorc"
+
+#yaml
+include "~/.nano.d/syntax-highlighting/yaml.nanorc"
+
+#yum
+#include "~/.nano.d/syntax-highlighting/yum.nanorc"
+
 #zshrc
 include "~/.nano.d/syntax-highlighting/zshrc.nanorc"
-

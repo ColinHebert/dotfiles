@@ -160,6 +160,9 @@ unset wordbounds
 #email
 #include "~/.nano.d/syntax-highlighting/email.nanorc"
 
+#erb
+#include "~/.nano.d/syntax-highlighting/erb.nanorc"
+
 #fish
 #include "~/.nano.d/syntax-highlighting/fish.nanorc"
 
@@ -179,7 +182,7 @@ include "~/.nano.d/syntax-highlighting/gitcommit.nanorc"
 #include "~/.nano.d/syntax-highlighting/glsl.nanorc"
 
 #go
-#include "~/.nano.d/syntax-highlighting/go.nanorc"
+include "~/.nano.d/syntax-highlighting/go.nanorc"
 
 #groff
 #include "~/.nano.d/syntax-highlighting/groff.nanorc"
@@ -191,7 +194,7 @@ include "~/.nano.d/syntax-highlighting/gitcommit.nanorc"
 include "~/.nano.d/syntax-highlighting/html.nanorc"
 
 #ini
-include "~/.nano.d/syntax-highlighting/ini.nanorc"
+#include "~/.nano.d/syntax-highlighting/ini.nanorc"
 
 #inputrc
 #include "~/.nano.d/syntax-highlighting/inputrc.nanorc"
@@ -206,7 +209,7 @@ include "~/.nano.d/syntax-highlighting/java.nanorc"
 include "~/.nano.d/syntax-highlighting/js.nanorc"
 
 #json
-include "~/.nano.d/syntax-highlighting/json.nanorc"
+#include "~/.nano.d/syntax-highlighting/json.nanorc"
 
 #keymap
 #include "~/.nano.d/syntax-highlighting/keymap.nanorc"
@@ -271,6 +274,9 @@ include "~/.nano.d/syntax-highlighting/patch.nanorc"
 #privoxy
 #include "~/.nano.d/syntax-highlighting/privoxy.nanorc"
 
+#puppet
+include "~/.nano.d/syntax-highlighting/puppet.nanorc"
+
 #python
 include "~/.nano.d/syntax-highlighting/python.nanorc"
 
@@ -286,6 +292,9 @@ include "~/.nano.d/syntax-highlighting/ruby.nanorc"
 #sed
 #include "~/.nano.d/syntax-highlighting/sed.nanorc"
 
+#scala
+#include "~/.nano.d/syntax-highlighting/scala.nanorc"
+
 #sh
 include "~/.nano.d/syntax-highlighting/sh.nanorc"
 
@@ -296,7 +305,10 @@ include "~/.nano.d/syntax-highlighting/sh.nanorc"
 #include "~/.nano.d/syntax-highlighting/systemd.nanorc"
 
 #tex
-include "~/.nano.d/syntax-highlighting/tex.nanorc"
+#include "~/.nano.d/syntax-highlighting/tex.nanorc"
+
+#tlc
+#include "~/.nano.d/syntax-highlighting/tlc.nanorc"
 
 #vala
 #include "~/.nano.d/syntax-highlighting/vala.nanorc"
@@ -316,5 +328,5 @@ include "~/.nano.d/syntax-highlighting/yaml.nanorc"
 #yum
 #include "~/.nano.d/syntax-highlighting/yum.nanorc"
 
-#zshrc
-include "~/.nano.d/syntax-highlighting/zshrc.nanorc"
+#zsh
+include "~/.nano.d/syntax-highlighting/zsh.nanorc"

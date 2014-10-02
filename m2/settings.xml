@@ -18,4 +18,27 @@
             <password>{GPSq5Ej1USMHj1OVCTwUDLP7gvbeAqfCmy8+i+Yp1ddO0k64+hCu3ted4VXGNrPvRYmHA9teqgyQmHuGxA7XWg==}</password>
         </server>
     </servers>
+    <profiles>
+        <profile>
+            <id>atlassian</id>
+            <repositories>
+                <repository>
+                    <id>atlassian-public</id>
+                    <name>Atlassian public repository</name>
+                    <url>https://maven.atlassian.com/repository/public</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>atlassian-public-snapshot</id>
+                    <name>Atlassian public repository</name>
+                    <url>https://maven.atlassian.com/repository/public</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <!--<activeProfile>atlassian</activeProfile>-->
+    </activeProfiles>
 </settings>

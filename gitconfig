@@ -49,7 +49,7 @@
     unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
     restash = !git update-ref -m $(git log -1 --pretty=format:'%s' $1) refs/stash $1
 [rerere]
-    enabled = true
+    enabled = false
 [diff]
     tool = Kaleidoscope
 [diff "plist"]

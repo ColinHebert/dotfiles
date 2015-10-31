@@ -19,15 +19,14 @@ zstyle ':prezto:*:*' case-sensitive 'no'
 zstyle ':prezto:*:*' color 'yes'
 
 # Auto set the tab and window titles.
-zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':prezto:module:terminal' auto-title 'no'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
-  'tmux' 'utility' 'ruby' \
-  'environment' 'terminal' 'editor' 'completion' 'history' 'directory' \
-  'prompt' 'gpg' \
-  'archive' 'git' 'history-substring-search' 'syntax-highlighting'
+   'tmux' 'utility' 'environment' 'terminal' 'editor' 'completion' 'history' \
+   'directory' 'prompt' 'archive' 'git' 'history-substring-search' \
+   'syntax-highlighting'
 
 # Auto launch GNU Screen at start-up.
 zstyle ':prezto:module:tmux:auto-start' local 'yes'

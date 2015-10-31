@@ -1,6 +1,3 @@
 [submodule "prezto"]
 	path = prezto
 	url = https://github.com/ColinHebert/prezto.git
-[submodule "nano.d/syntax-highlighting"]
-	path = nano.d/syntax-highlighting
-	url = https://github.com/scopatz/nanorc.git

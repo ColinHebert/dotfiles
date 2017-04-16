@@ -24,9 +24,8 @@ zstyle ':prezto:module:terminal' auto-title 'no'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
-   'tmux' 'utility' 'environment' 'terminal' 'editor' 'completion' 'history' \
-   'directory' 'prompt' 'archive' 'git' 'history-substring-search' \
-   'syntax-highlighting'
+   'tmux' 'utility' 'environment' 'completion' 'history' \
+   'prompt' 'git' 'history-substring-search' 'syntax-highlighting'
 
 # Auto launch GNU Screen at start-up.
 zstyle ':prezto:module:tmux:auto-start' local 'yes'

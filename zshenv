@@ -1,7 +1,9 @@
-unsetopt GLOBAL_RCS
 # ------------------------------------------------------------------------------
 # Paths
 # ------------------------------------------------------------------------------
+# Ignore global zshrc and zprofile files
+unsetopt GLOBAL_RCS
+
 typeset -gU cdpath fpath mailpath manpath path
 typeset -gUT INFOPATH infopath
 

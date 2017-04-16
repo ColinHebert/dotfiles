@@ -40,7 +40,6 @@
     log-merge = !git log $(git merge-base --octopus $(git log -1 --merges --pretty=format:%P $1))..$1 --graph --pretty=oneline --abbrev-commit --boundary
     log-all = !git log --graph --decorate --pretty=oneline --abbrev-commit --all $(git fsck --no-reflogs | grep commit | cut -d\\  -f3)
     git = !git
-    stree = !stree
     man = help
     fap = fetch --all -p
     assumed = "!git ls-files -v | grep ^h | cut -c 3-"
@@ -50,20 +49,5 @@
     restash = !git update-ref -m $(git log -1 --pretty=format:'%s' $1) refs/stash $1
 [rerere]
     enabled = false
-[diff]
-    tool = Kaleidoscope
 [diff "plist"]
     textconv = catplist
-[merge]
-    tool = Kaleidoscope
-[difftool]
-    prompt = false
-[mergetool]
-    prompt = false
-[difftool "Kaleidoscope"]
-    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[mergetool "Kaleidoscope"]
-    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-    trustExitCode = true
-[credential]
-	helper = osxkeychain

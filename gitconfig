@@ -1,6 +1,7 @@
 [core]
     attributesfile = ~/.gitattributes
     excludesfile = ~/.gitignore
+    hooksPath = .githooks
 [user]
     name = Colin Hebert
     email = hebert.colin@gmail.com

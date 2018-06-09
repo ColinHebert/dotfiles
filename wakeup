@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# Reload the SD-Card
-sleep 5
-sudo kextunload -b com.apple.driver.AppleSDXC
-sudo kextload -b com.apple.driver.AppleSDXC

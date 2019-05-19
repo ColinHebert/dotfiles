@@ -25,7 +25,8 @@ zstyle ':prezto:module:terminal' auto-title 'no'
 # The order matters.
 zstyle ':prezto:load' pmodule \
    'tmux' 'utility' 'environment' 'completion' 'history' \
-   'prompt' 'git' 'history-substring-search' 'syntax-highlighting'
+   'prompt' 'git' 'history-substring-search' 'syntax-highlighting' \
+   'autosuggestions'
 
 # Auto launch GNU Screen at start-up.
 zstyle ':prezto:module:tmux:auto-start' local 'yes'

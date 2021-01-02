@@ -1,7 +1,0 @@
-#!/bin/sh
-docker run \
-  --rm \
-  "$(tty >/dev/null 2>&1 && printf -- '-ti' || printf -- '-i' )" \
-  -v "$(pwd):/workdir" \
-  unibeautify/puppet-lint \
-  "$@"

@@ -1,0 +1,101 @@
+#
+# A theme heavily using git_prompt_info.
+#
+# Authors:
+#   Colin Hebert <hebert.colin@gmail.com>
+#
+# Requires UTF-8
+
+function prompt_makkhdyn_precmd {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+
+  if (( $+functions[git-info] )); then
+    git-info
+  fi
+}
+
+function prompt_makkhdyn_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
+
+  autoload -Uz add-zsh-hook
+  add-zsh-hook precmd prompt_makkhdyn_precmd
+
+  prompt_makkhdyn_setup_git
+
+  zstyle ':prezto:module:editor:info:completing' format '%B%F{red}...%f%b'
+  zstyle ':prezto:module:editor:info:primary:overwrite' format ' %F{red}♺%f'
+  zstyle ':prezto:module:editor:info:alternate' format ' %F{yellow}❮%f%B%F{red}❮%f%b%F{red}❮%f'
+
+  PROMPT=''
+  # The hostname 'MyHost:'
+  if [[ -n "$SSH_CLIENT" ]]; then
+    PROMPT+='%F{blue}%m:'
+  fi
+  # The relative path '~/myFolder'
+  PROMPT+='%F{green}%~'
+  # The git prompt (see prompt_makkhdyn_setup_git)
+  PROMPT+='%F{blue}${git_info:+(${(e)git_info[prompt]})}'
+  # '#' if the current user is root, '$' otherwise
+  PROMPT+=' %B%F{red}%(!.#.$)'
+  # Reset the colors and add a space
+  PROMPT+='%b%f '
+
+  RPROMPT=''
+  # The number of jobs (if there is one job) '[Jobs: 42]'
+  RPROMPT+='%1(j.%F{blue}[Jobs: %B%j%b%f%F{blue}]%f.)'
+  # The editor keymap (when vim mode is enabled) '❮❮❮'
+  RPROMPT+='${editor_info[keymap]}'
+  # The editor override mode '♺'
+  RPROMPT+='${editor_info[overwrite]}'
+  # Last command exit code ('⏎' if fail)
+  RPROMPT+='%(?:: %F{red}%B⏎%f)'
+
+  SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
+}
+
+# Set up the git_info configuration
+# Only one prompt is created (git_info[prompt])
+# Display the branch name if available, otherwise the position, otherwise the
+#   current commit id
+# Display the difference with remote ('<' and/or '>') or '=' if the branch is
+#   up to date
+function prompt_makkhdyn_setup_git {
+  zstyle ':prezto:module:git:info' verbose 'yes'
+  # %s - Special action name (am, merge, rebase).
+  zstyle ':prezto:module:git:info:action' format '|%s'
+  # %a - Indicator to notify of added files.
+  zstyle ':prezto:module:git:info:added' format '+'
+  # %A - Indicator to notify of ahead branch.
+  zstyle ':prezto:module:git:info:ahead' format '>'
+  # %B - Indicator to notify of behind branch.
+  zstyle ':prezto:module:git:info:behind' format '<'
+  # %b - Branch name.
+  zstyle ':prezto:module:git:info:branch' format '%b'
+  # %c - SHA-1 hash.
+  zstyle ':prezto:module:git:info:commit' format '(%.7c...)'
+  # %d - Indicator to notify of deleted files.
+  zstyle ':prezto:module:git:info:deleted' format '-'
+  # %m - Indicator to notify of modified files.
+  zstyle ':prezto:module:git:info:modified' format '*'
+  # %p - HEAD position in relation to the nearest branch, remote, tag.
+  zstyle ':prezto:module:git:info:position' format '(%p)'
+  # %R - Remote name.
+  zstyle ':prezto:module:git:info:remote' format '='
+  # %r - Indicator to notify of renamed files.
+  zstyle ':prezto:module:git:info:renamed' format '^'
+  # %S - Indicator to notify of stashed files.
+  zstyle ':prezto:module:git:info:stashed' format '\$'
+  # %U - Indicator to notify of unmerged files.
+  zstyle ':prezto:module:git:info:unmerged' format '!'
+  # %u - Indicator to notify of untracked files.
+  zstyle ':prezto:module:git:info:untracked' format '%%%'
+
+  # Prompts.
+  zstyle ':prezto:module:git:info:keys' format \
+      prompt '$(coalesce "%b" "%p" "%c")%m%a%d%r%S%u%U$(coalesce "%B%A" "%R")%s'
+}
+
+prompt_makkhdyn_setup "$@"

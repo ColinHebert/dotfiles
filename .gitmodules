@@ -1,3 +1,4 @@
 [submodule "prezto"]
 	path = zprezto
-	url = https://github.com/ColinHebert/prezto.git
+	url = https://github.com/sorin-ionescu/prezto.git
+	branch = master

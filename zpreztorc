@@ -24,6 +24,8 @@ if [[ $TERM_PROGRAM == 'Apple_Terminal' ]]; then
   zstyle ':prezto:module:tmux:auto-start' local 'yes'
 fi
 
+zstyle ':prezto:module:git:alias' skip 'yes'
+
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.

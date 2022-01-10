@@ -17,7 +17,7 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
    'tmux' 'utility' 'environment' 'completion' 'history' \
    'prompt' 'git' 'history-substring-search' 'syntax-highlighting' \
-   'autosuggestions'
+   'autosuggestions' 'command-not-found'
 
 # Auto launch GNU Screen at start-up (Terminal only).
 if [[ $TERM_PROGRAM == 'Apple_Terminal' ]]; then

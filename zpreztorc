@@ -19,8 +19,10 @@ zstyle ':prezto:load' pmodule \
    'prompt' 'git' 'history-substring-search' 'syntax-highlighting' \
    'autosuggestions'
 
-# Auto launch GNU Screen at start-up.
-zstyle ':prezto:module:tmux:auto-start' local 'yes'
+# Auto launch GNU Screen at start-up (Terminal only).
+if [[ $TERM_PROGRAM == 'Apple_Terminal' ]]; then
+  zstyle ':prezto:module:tmux:auto-start' local 'yes'
+fi
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.

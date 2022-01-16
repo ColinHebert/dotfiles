@@ -1,0 +1,21 @@
+#!/bin/sh
+set -euf
+
+alias plistbuddy='sudo /usr/libexec/PlistBuddy'
+chromePlist="/Library/Managed Preferences/$(whoami)/com.google.Chrome.plist"
+
+# Remove SignIn restrictions
+signingPatternKey='RestrictSigninToPattern'
+plistbuddy -c "Set :$signingPatternKey .*" "$chromePlist"
+echo "Replaced $signingPatternKey"
+
+# Add Checker Plus for Gmail
+extensionSettingsKey='ExtensionSettings'
+checkerPlusId='oeopbcgkkoapgobdbedcemjljbihmemj'
+plistbuddy -c "Delete :$extensionSettingsKey:$checkerPlusId" "$chromePlist" 2> /dev/null || true
+plistbuddy -c "Add :$extensionSettingsKey:$checkerPlusId dict" "$chromePlist"
+plistbuddy -c "Add :$extensionSettingsKey:$checkerPlusId:runtime_blocked_hosts array" "$chromePlist"
+plistbuddy -c "Add :$extensionSettingsKey:$checkerPlusId:runtime_blocked_hosts: string *://*" "$chromePlist"
+plistbuddy -c "Add :$extensionSettingsKey:$checkerPlusId:runtime_allowed_hosts array" "$chromePlist"
+plistbuddy -c "Add :$extensionSettingsKey:$checkerPlusId:runtime_allowed_hosts: string https://mail.google.com" "$chromePlist"
+echo "Replaced $extensionSettingsKey:$checkerPlusId (Checker Plus for Gmail)"

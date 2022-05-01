@@ -38,6 +38,8 @@ path=(
   $HOME/.local/opt/{bin,sbin}
   /usr/local/opt/coreutils/libexec/gnubin
   /usr/local/{bin,sbin}
+  /opt/homebrew/opt/coreutils/libexec/gnubin
+  /opt/homebrew/{bin,sbin}
   /usr/{bin,sbin}
   /{bin,sbin}
   $path

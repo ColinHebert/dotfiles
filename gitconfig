@@ -5,7 +5,7 @@
 [user]
     name = Colin Hebert
     email = hebert.colin@gmail.com
-    signingkey = 5C30725AB251152A
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDlE/V1PzE+voehMFGNMAvIGFZuCvdovineWKWifp9Sx
 [color]
     ui = true
 [color "branch"]
@@ -52,3 +52,9 @@
     enabled = false
 [diff "plist"]
     textconv = catplist
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[commit]
+  gpgsign = true
